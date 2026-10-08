@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS productos_db;
+USE productos_db;
+
+CREATE TABLE IF NOT EXISTS products (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    stock INT NOT NULL,
+    description TEXT NOT NULL,
+    brand VARCHAR(255) NULL,
+    img TEXT NULL,
+    active BOOLEAN NOT NULL DEFAULT TRUE
+);
